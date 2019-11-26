@@ -1,2 +1,4 @@
 .idea
 LoginAppProject.iml
+node_modules
+dist
