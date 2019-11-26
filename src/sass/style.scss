@@ -1,0 +1,29 @@
+.no-padding {
+  padding: 0;
+}
+
+.my {
+  background-color: #fff;
+  width: 50%;
+  height: 100vh;
+  position: relative;
+}
+
+.my2 {
+  width: 50%;
+  background-color: #56d19a;
+  height: 100vh;
+}
+
+.mycol{
+  height: 400px;
+}
+.col-postition{
+  position: relative;
+}
+.card-postition {
+  width: 400px;
+  position: absolute;
+  right: 50px;
+  top: 15%;
+}
