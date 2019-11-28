@@ -8,20 +8,22 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Bootstrap core CSS -->
+
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css" rel="stylesheet">
+
 	<title>Document</title>
 </head>
 <body>
 
+<a class="btn btn-info myyy">Info message</a>
 <div class="container-fluid no-padding">
 	<div class="flex-row d-flex">
-		<div class="col-auto my">
-			<div class="card card-postition">
-
+		<div class="col-auto d-flex align-items-center justify-content-end my">
+			<form class="card card-width " name="mdbform">
 				<div class="card-body mx-4">
-
 					<!--Header-->
 					<div class="text-center">
 						<h3 class="dark-grey-text mb-5"><strong>Sign up</strong></h3>
@@ -29,55 +31,68 @@
 
 					<!--Body-->
 					<div class="md-form">
-						<input type="text" id="Form-email1" class="form-control">
+						<input
+								type="text"
+								id="Form-email1"
+								class="form-control"
+								data-required="email"
+								data-invalid-message="Please provide a valid state"
+						>
+
 						<label for="Form-email1">Your email</label>
 					</div>
 
 					<div class="md-form">
-						<input type="password" id="Form-pass1" class="form-control">
+						<input
+								type="password"
+								id="Form-pass1"
+								class="form-control"
+								data-required="password"
+								data-invalid-message="Please provide a valid state"
+						>
+
 						<label for="Form-pass1">Your password</label>
 					</div>
-
-					<div class="md-form pb-3">
-						<input type="search" id="form-autocomplete-1" class="form-control mdb-autocomplete">
-
-						<label for="form-autocomplete-1" class="active">Your country</label>
-					</div>
-
 					<div class="text-center mb-3">
-						<button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">
+						<button type="submit" class="btn blue-gradient btn-block btn-rounded z-depth-1a">
 							Sign up
 						</button>
 					</div>
-
-
 				</div>
-
 				<!--Footer-->
 				<div class="modal-footer mx-5 pt-3 mb-1">
-					<p class="font-small grey-text d-flex justify-content-end">Already a member? <a href="#"
-																									class="blue-text ml-1">
-						Sign In</a></p>
+					<p class="font-small grey-text d-flex justify-content-end">Already a member?
+						<a href="#" class="blue-text ml-1">Sign In</a></p>
 				</div>
 
-			</div>
+			</form>
 		</div>
 
-		<div class="col-auto my2">
-			
+		<div class="col-auto d-flex align-items-center my2">
+			<div class="welcomeApp">
+				<h2 class="welcomeApp__title">Welcome To Login App</h2>
+				<p class="welcomeApp__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cum
+					ducimus ea est impedit non odio optio rem sapiente sit!</p>
+			</div>
 		</div>
 	</div>
 </div>
 
-
 <!-- JQuery -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="MDB/js/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="MDB/js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="MDB/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"></script>
+<script type="text/javascript" src="MDB/js/mdb.min.js"></script>
+
+<script>
+
+    const btn = document.querySelector( '.myyy' );
+    btn.addEventListener( 'click', () => {
+        toastr.success( 'Hi! I am warning message.' );
+    } )
+</script>
 </body>
 </html>
